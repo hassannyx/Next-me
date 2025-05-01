@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="ar">
 <head>
-    <title>اختبار الأنماط</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الأنماط الشخصية | 16Personality</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- محتوى HTML هنا -->
+    <div class="container">
+        <!-- شاشة البداية -->
+        <div id="start-screen">
+            <h1>مرحباً بك في اختبار الأنماط</h1>
+            <p>اختبار مكون من 20 سؤالاً لاكتشاف شخصيتك الحقيقية</p>
+            <button id="start-btn">ابدأ الاختبار</button>
+        </div>
+
+        <!-- شاشة الأسئلة -->
+        <div id="quiz-screen" style="display:none">
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <h2 id="question-text">السؤال يظهر هنا</h2>
+            <div id="options-container"></div>
+        </div>
+
+        <!-- شاشة النتيجة -->
+        <div id="result-screen" style="display:none">
+            <h2>🎉 تم تحليل شخصيتك!</h2>
+            <div id="personality-result"></div>
+            <button id="restart-btn">إعادة الاختبار</button>
+        </div>
+    </div>
+
+    <!-- كود التحقق المطلوب -->
+    <script>
+        console.log("تم تحميل الموقع بنجاح - المرحلة الأولى");
+        alert("مرحباً! الموقع يعمل بشكل صحيح حتى هذه النقطة");
+        
+        // تحميل الملفات الأساسية
+        console.log("حالة تحميل الملفات:");
+        console.log("- style.css: " + (document.querySelector('link[href="style.css"]' ? 'تم التحميل' : 'غير محمل'));
+        console.log("- script.js: " + (document.querySelector('script[src="script.js"]' ? 'تم التحميل' : 'غير محمل'));
+    </script>
+
+    <!-- الملف الرئيسي للجافاسكريبت -->
     <script src="script.js"></script>
+
+    <!-- كود تحميل إضافي -->
+    <script>
+        window.addEventListener('load', function() {
+            console.log("تم تحميل جميع الموارد بالكامل");
+            
+            // التحقق من عناصر الواجهة
+            const elements = [
+                'start-screen', 'quiz-screen', 'result-screen',
+                'start-btn', 'question-text', 'options-container'
+            ];
+            
+            elements.forEach(el => {
+                console.log(`عنصر ${el}: ${document.getElementById(el) ? 'موجود' : 'غير موجود'}`);
+            });
+        });
+    </script>
 </body>
 </html>
