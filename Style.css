@@ -1,0 +1,133 @@
+/* التصميم العام */
+body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* شاشة البداية */
+#start-screen {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+#start-screen h1 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+#start-screen p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* أزرار عامة */
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* شاشة الأسئلة */
+#quiz-screen {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    background: #ecf0f1;
+    border-radius: 10px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+#progress {
+    background: #2ecc71;
+    height: 100%;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s;
+}
+
+#question-text {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* خيارات الأسئلة */
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#options-container button {
+    background: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+    text-align: right;
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+#options-container button:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* شاشة النتيجة */
+#result-screen {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#personality-result {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* التصميم للهواتف */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #start-screen, #quiz-screen, #result-screen {
+        padding: 20px;
+    }
+    
+    #question-text {
+        font-size: 20px;
+    }
+}
